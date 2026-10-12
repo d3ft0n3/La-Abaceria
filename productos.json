@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "aceite-evoa-gourmet",
+    "nombre": "Aceite de Oliva Virgen Extra Ecológico",
+    "subtitulo": "Cosecha temprana de la Marina Baixa",
+    "precio": "14.50 €",
+    "formato": "Botella cristal 500ml",
+    "origen": "El Castell de Guadalest, Alicante",
+    "productor": "Almazara Tradicional del Valle",
+    "imagen": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80",
+    "origen_artesania": "Elaborado con aceitunas autóctonas recolectadas a mano en bancales centenarios bajo el clima mediterráneo de montaña.",
+    "ingredientes": "100% Aceite de Oliva Virgen Extra de categoría superior.",
+    "usos_maridaje": "Ideal en crudo para tostadas, ensaladas de tomate de huerta y quesos curados artesanales.",
+    "notas_creador": "Cada lote procede de una selección limitada de olivos centenarios no tratados químicamente."
+  }
+]

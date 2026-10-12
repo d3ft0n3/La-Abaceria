@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Producto | Artesanía y Gourmet</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Serif clásica) & Plus Jakarta Sans (Sans limpia) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arena: '#F9F6F0',
+                        arenaClaro: '#FFFFFF',
+                        arenaOscuro: '#EBE5D8',
+                        moca: '#231F1E',
+                        mocaSuave: '#5A524C',
+                        dorado: '#C5A880',
+                        doradoOscuro: '#9E825D'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-arena text-moca font-sans antialiased selection:bg-dorado selection:text-white">
+
+    <!-- Contenedor Principal Mobile-First -->
+    <main class="max-w-md mx-auto min-h-screen bg-arenaClaro shadow-2xl flex flex-col justify-between border-x border-arenaOscuro/40">
+        
+        <div>
+            <!-- Cabecera / Galería de Imagen -->
+            <div class="relative w-full h-80 bg-moca overflow-hidden">
+                <img id="prod-img" src="" alt="Producto" class="w-full h-full object-cover opacity-95">
+                <div class="absolute inset-0 bg-gradient-to-t from-moca/60 via-transparent to-transparent"></div>
+                <!-- Badge de Colección / Tienda -->
+                <span class="absolute top-4 left-4 bg-moca/80 backdrop-blur-md text-dorado border border-dorado/30 text-xs px-3 py-1.5 rounded-full uppercase tracking-widest font-medium">
+                    Edición Artesanal
+                </span>
+            </div>
+
+            <!-- Título y Precio -->
+            <section class="px-6 pt-6 pb-4 border-b border-arenaOscuro/50">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <h1 id="prod-nombre" class="font-serif text-2xl font-bold text-moca leading-tight">Cargando producto...</h1>
+                        <p id="prod-subtitulo" class="text-sm text-mocaSuave mt-1 italic font-light"></p>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <span id="prod-precio" class="font-serif text-2xl font-semibold text-doradoOscuro">-- €</span>
+                        <p id="prod-formato" class="text-xs text-mocaSuave mt-0.5"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secciones de Contenido (Acordeones o Bloques Limpios) -->
+            <div class="px-6 py-6 space-y-6">
+                
+                <!-- Origen y Artesanía -->
+                <div class="bg-arena/50 p-4 rounded-xl border border-arenaOscuro/40">
+                    <h2 class="text-xs font-semibold uppercase tracking-wider text-doradoOscuro mb-1 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-dorado"></span> Origen y Artesanía
+                    </h2>
+                    <p id="prod-origen-texto" class="text-sm text-moca/80 leading-relaxed font-light"></p>
+                    <div class="mt-2 text-xs text-mocaSuave flex items-center gap-1 font-medium">
+                        <span>📍 Procedencia:</span> <span id="prod-origen-geo"></span>
+                    </div>
+                </div>
+
+                <!-- Ingredientes / Materiales -->
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-mocaSuave mb-2">Ingredientes / Composición</h3>
+                    <p id="prod-ingredientes" class="text-sm text-moca/80 bg-arena/30 p-3 rounded-lg border border-arenaOscuro/30 font-light"></p>
+                </div>
+
+                <!-- Usos y Maridaje -->
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-doradoOscuro mb-2 flex items-center gap-2">
+                        <span>✨</span> Usos y Recomendaciones
+                    </h3>
+                    <p id="prod-maridaje" class="text-sm text-moca/80 leading-relaxed font-light"></p>
+                </div>
+
+                <!-- Notas del Creador (Storytelling) -->
+                <div class="border-l-2 border-dorado pl-4 py-1 my-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-mocaSuave mb-1">Notas del Creador</h3>
+                    <p id="prod-notas" class="text-sm italic text-moca/80 font-serif"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pie de página / Contacto Presencial -->
+        <footer class="p-6 bg-arena border-t border-arenaOscuro/55 text-center space-y-3">
+            <p class="text-xs text-mocaSuave font-light">¿Te gusta este producto? Consúltanos directamente en mostrador o llévalo contigo.</p>
+            <a href="https://wa.me/34659746102?text=Hola,%20estoy%20en%20la%20tienda%20y%20me%20interesa%20saber%20más%20sobre%20este%20producto." target="_blank" class="w-full block bg-moca hover:bg-mocaSuave text-arena py-3.5 px-6 rounded-xl font-medium text-sm transition-all shadow-md tracking-wide">
+                💬 Consultar con el tendero
+            </a>
+            <p class="text-[10px] text-mocaSuave/60 uppercase tracking-widest pt-2">Diseñado e implementado por La Abacería</p>
+        </footer>
+
+    </main>
+
+    <!-- Script de carga dinámica basada en la URL (ej: /producto.html?slug=aceite-evoa-gourmet) -->
+    <script>
+        // Base de datos integrada de ejemplo (se puede sustituir por un fetch a 'productos.json')
+        const baseDeDatosProductos = {
+            "aceite-evoa-gourmet": {
+                nombre: "Aceite de Oliva Virgen Extra Ecológico",
+                subtitulo: "Cosecha temprana de la Marina Baixa",
+                precio: "14.50 €",
+                formato: "Botella 500ml",
+                origen: "El Castell de Guadalest, Alicante",
+                productor: "Almazara Tradicional del Valle",
+                imagen: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80",
+                origen_texto: "Elaborado con aceitunas autóctonas recolectadas a mano en bancales centenarios bajo el clima mediterráneo de montaña.",
+                ingredientes: "100% Aceite de Oliva Virgen Extra de categoría superior, extracción fría.",
+                maridaje: "Ideal en crudo para tostadas matinales, tomates de huerta, emulsiones suaves y quesos curados artesanales.",
+                notas: "Cada lote procede de una selección limitada de olivos centenarios no tratados químicamente."
+            }
+        };
+
+        // Leer slug de los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug') || 'aceite-evoa-gourmet'; // Valor por defecto para pruebas
+
+        const producto = baseDeDatosProductos[slug];
+
+        if (producto) {
+            document.getElementById('prod-img').src = producto.imagen;
+            document.getElementById('prod-nombre').textContent = producto.nombre;
+            document.getElementById('prod-subtitulo').textContent = producto.subtitulo;
+            document.getElementById('prod-precio').textContent = producto.precio;
+            document.getElementById('prod-formato').textContent = producto.formato;
+            document.getElementById('prod-origen-texto').textContent = producto.origen_texto;
+            document.getElementById('prod-origen-geo').textContent = producto.origen;
+            document.getElementById('prod-ingredientes').textContent = producto.ingredientes;
+            document.getElementById('prod-maridaje').textContent = producto.maridaje;
+            document.getElementById('prod-notas').textContent = `"${producto.notas}" — Producido por ${producto.productor}`;
+        } else {
+            document.getElementById('prod-nombre').textContent = "Producto no encontrado";
+            document.getElementById('prod-subtitulo').textContent = "El código escaneado no corresponde a un producto activo.";
+        }
+    </script>
+</body>
+</html>
